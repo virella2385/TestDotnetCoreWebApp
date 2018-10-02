@@ -2,7 +2,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace TestNetCoreWebApp
 {
-	// this is just to test commit in https
+	
     public interface IGreeter
     {
         string GetMessageOfTheDay();
