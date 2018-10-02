@@ -1,0 +1,14 @@
+/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/obj/Debug/netcoreapp2.1/TestNetCoreWebApp.csprojAssemblyReference.cache
+/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/obj/Debug/netcoreapp2.1/TestNetCoreWebApp.csproj.CoreCompileInputs.cache
+/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/obj/Debug/netcoreapp2.1/TestNetCoreWebApp.RazorAssemblyInfo.cache
+/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/obj/Debug/netcoreapp2.1/TestNetCoreWebApp.RazorAssemblyInfo.cs
+/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/obj/Debug/netcoreapp2.1/TestNetCoreWebApp.AssemblyInfoInputs.cache
+/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/obj/Debug/netcoreapp2.1/TestNetCoreWebApp.AssemblyInfo.cs
+/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/bin/Debug/netcoreapp2.1/TestNetCoreWebApp.deps.json
+/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/bin/Debug/netcoreapp2.1/TestNetCoreWebApp.runtimeconfig.json
+/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/bin/Debug/netcoreapp2.1/TestNetCoreWebApp.runtimeconfig.dev.json
+/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/bin/Debug/netcoreapp2.1/TestNetCoreWebApp.dll
+/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/bin/Debug/netcoreapp2.1/TestNetCoreWebApp.pdb
+/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/obj/Debug/netcoreapp2.1/TestNetCoreWebApp.RazorTargetAssemblyInfo.cache
+/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/obj/Debug/netcoreapp2.1/TestNetCoreWebApp.dll
+/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/obj/Debug/netcoreapp2.1/TestNetCoreWebApp.pdb
