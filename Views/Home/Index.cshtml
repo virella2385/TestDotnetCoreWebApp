@@ -1,4 +1,4 @@
-@model TestNetCoreWebApp.Models.Restaurant
+@model IEnumerable<TestNetCoreWebApp.Models.Restaurant>
 
 <!DOCTYPE html>
 <html>
@@ -6,8 +6,21 @@
 	<title></title>
 </head>
 <body>
-<h3>@Model.name</h3>
-<div>The name is @Model.id</div>
+	<table>
+		@foreach (var rest in Model)
+		{
+			<tr>
+				<td>
+					@rest.id
+				</td>
+				<td>
+					@rest.name
+				</td>
+			</tr>
+		}
+	</table>
+@* <h3>@Model.name</h3>
+<div>The name is @Model.id</div> *@
 
 </body>
 </html>
