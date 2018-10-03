@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"usemvc",
+				"UseMvcWithDefaultRoute()\tIApplicationBuilder"
+			],
+			[
+				"def",
+				"DefaultFilesOptions\tDefaultFilesOptions"
+			],
+			[
+				"usede",
+				"UseDefaultFiles()\tIApplicationBuilder"
+			],
+			[
+				"use",
+				"UseStaticFiles()\tIApplicationBuilder"
+			],
+			[
+				"r",
+				"Response\tHttpResponse"
+			],
+			[
+				"con",
+				"context\tHttpContext"
+			],
+			[
+				"lo",
+				"LogInformation(string message, params object[] args)\tvoid"
+			],
+			[
+				"wel",
+				"WelcomePageOptions\tWelcomePageOptions"
+			],
+			[
+				"usewe",
+				"UseWelcomePage()\tIApplicationBuilder"
+			],
+			[
+				"addsing",
+				"AddSingleton<TService, TImplementation>()\tIServiceCollection"
+			],
+			[
+				"get",
+				"GetMessageOfTheDay()\tstring"
+			],
+			[
 				"fir",
 				"firstName"
 			]
@@ -12,53 +56,32 @@
 	"buffers":
 	[
 		{
-			"contents": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Threading.Tasks;\nusing Microsoft.AspNetCore.Builder;\nusing Microsoft.AspNetCore.Hosting;\nusing Microsoft.AspNetCore.Http;\nusing Microsoft.Extensions.DependencyInjection;\nusing Microsoft.Extensions.Configuration;\n\nnamespace TestNetCoreWebApp\n{\n    public class Startup\n    {\n        // This method gets called by the runtime. Use this method to add services to the container.\n        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940\n        public void ConfigureServices(IServiceCollection services)\n        {\n        }\n\n        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.\n        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IConfiguration conf)\n        {\n            if (env.IsDevelopment())\n            {\n                app.UseDeveloperExceptionPage();\n            }\n            string testStr = \"frggdfgfdg\".\n\n            app.Run(async (context) =>\n            {\n                var greeting = conf[\"Greeting\"];\n                await context.Response.WriteAsync(greeting);\n            });\n        }\n    }\n}\n",
 			"file": "Startup.cs",
-			"file_size": 1232,
-			"file_write_time": 131829408888813358,
 			"settings":
 			{
-				"buffer_size": 1239,
+				"buffer_size": 2161,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "TestNetCoreWebApp.csproj",
+			"file": "Controllers/HomeController.cs",
 			"settings":
 			{
-				"buffer_size": 381,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "TestNetCoreWebApp.sublime-project",
-			"settings":
-			{
-				"buffer_size": 118,
+				"buffer_size": 191,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "Package Control Messages\n========================\n\nOmniSharp\n---------\n\n  Welcome to OmniSharpSublime!\n  \n  You can now edit C#, build your projects, run your tests, get intellisense, refactor like a pro, be shown syntax errors and lots more!\n  \n  For more information see the README and Wiki here: https://github.com/OmniSharp/omnisharp-sublime\n",
+			"contents": "Now listening on: http://localhost:5000                                                                                                                                                  \nApplication started. Press Ctrl+C to shut down.                                                                                                                                          \ninfo: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]                                                                                                                                   \n      Request starting HTTP/1.1 GET http://localhost:5000/                                                                                                                               \ninfo: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]                                                                                                                       \n      Route matched with {action = \"Index\", controller = \"Home\"}. Executing action TestNetCoreWebApp.Controllers.HomeController.Index (TestNetCoreWebApp)                                \ninfo: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]                                                                                                                       \n      Executing action method TestNetCoreWebApp.Controllers.HomeController.Index (TestNetCoreWebApp) - Validation state: Valid                                                           \ninfo: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]                                                                                                                       \n      Executed action method TestNetCoreWebApp.Controllers.HomeController.Index (TestNetCoreWebApp), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.1568ms.                  \ninfo: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]                                                                                                                    \n      Executing ObjectResult, writing value of type 'System.String'.                                                                                                                     \ninfo: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]                                                                                                                       \n      Executed action TestNetCoreWebApp.Controllers.HomeController.Index (TestNetCoreWebApp) in 18.4911ms                                                                                \ninfo: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]                                                                                                                                   \n      Request finished in 80.7083ms 200 text/plain; charset=utf-8                                                                                                                        \ninfo: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]                                                                                                                                   \n      Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico                                                                                                                    \ninfo: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]                                                                                                                                   \n      Request finished in 4.8275ms 200                                                                                                                                                   \ninfo: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]                                                                                                                                   \n      Request starting HTTP/1.1 GET http://localhost:5000/                                                                                                                               \ninfo: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]                                                                                                                       \n      Route matched with {action = \"Index\", controller = \"Home\"}. Executing action TestNetCoreWebApp.Controllers.HomeController.Index (TestNetCoreWebApp)                                \ninfo: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]                                                                                                                       \n      Executing action method TestNetCoreWebApp.Controllers.HomeController.Index (TestNetCoreWebApp) - Validation state: Valid                                                           \ninfo: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]                                                                                                                       \n      Executed action method TestNetCoreWebApp.Controllers.HomeController.Index (TestNetCoreWebApp), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0125ms.                  \ninfo: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]                                                                                                                    \n      Executing ObjectResult, writing value of type 'System.String'.                                                                                                                     \ninfo: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]                                                                                                                       \n      Executed action TestNetCoreWebApp.Controllers.HomeController.Index (TestNetCoreWebApp) in 0.4111ms                                                                                 \ninfo: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]                                                                                                                                   \n      Request finished in 0.725ms 200 text/plain; charset=utf-8                                                                                                                          \ninfo: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]                                                                                                                                   \n      Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico                                                                                                                    \ninfo: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]                                                                                                                                   \n      Request finished in 0.2079ms 200                                                                                                                                                   \n^CApplication is shutting down...                                                                                                                                                        \n                                                                                                                                                                                         \niColossus:TestNetCoreWebApp alakratt$ dotnet build                                                                                                                                       \nMicrosoft (R) Build Engine version 15.8.166+gd4e8d81a88 for .NET Core                                                                                                                    \nCopyright (C) Microsoft Corporation. All rights reserved.                                                                                                                                \n                                                                                                                                                                                         \n  Restore completed in 32.11 ms for /Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/TestNetCoreWebApp.csproj.                                                  \n  TestNetCoreWebApp -> /Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/bin/Debug/netcoreapp2.1/TestNetCoreWebApp.dll                                           \n                                                                                                                                                                                         \nBuild succeeded.                                                                                                                                                                         \n    0 Warning(s)                                                                                                                                                                         \n    0 Error(s)                                                                                                                                                                           \n                                                                                                                                                                                         \nTime Elapsed 00:00:01.15                                                                                                                                                                 \niColossus:TestNetCoreWebApp alakratt$                                                                                                                                                    \n",
 			"settings":
 			{
-				"buffer_size": 346,
+				"buffer_size": 9858,
 				"line_ending": "Unix",
-				"name": "Package Control Messages",
+				"name": "Terminal (bash)",
 				"read_only": true,
 				"scratch": true
-			}
-		},
-		{
-			"file": "appsettings.json",
-			"settings":
-			{
-				"buffer_size": 30,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "{"
 			}
 		}
 	],
@@ -74,7 +97,59 @@
 		"selected_items":
 		[
 			[
+				"fix",
+				"OmniSharpSublime: Fix Usings"
+			],
+			[
+				"code i",
+				"OmniSharpSublime: Fix Code Issue"
+			],
+			[
+				"fix u",
+				"OmniSharpSublime: Fix Usings"
+			],
+			[
+				"comment",
+				"Toggle Block Comment"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"snippet",
+				"Snippet: Interface"
+			],
+			[
+				"code ac",
+				"OmniSharpSublime: Fix Code Issue"
+			],
+			[
+				"terminalvi",
+				"Terminal View: Open Bash Terminal"
+			],
+			[
+				"terminal",
+				"Terminal: Open in project folder"
+			],
+			[
+				"git",
+				"Set Syntax: Git Log"
+			],
+			[
 				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"packa",
 				"Package Control: Install Package"
 			],
 			[
@@ -106,16 +181,8 @@
 				"Package Control: Install Package"
 			],
 			[
-				"color",
-				"UI: Select Color Scheme"
-			],
-			[
 				"theme",
 				"UI: Select Theme"
-			],
-			[
-				"ins",
-				"Package Control: Install Package"
 			],
 			[
 				"them",
@@ -165,6 +232,7 @@
 		"height": 275.0,
 		"history":
 		[
+			"git"
 		]
 	},
 	"distraction_free":
@@ -178,10 +246,29 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp"
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/bin",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/bin/Debug",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/bin/Debug/netcoreapp2.1",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/Controllers",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/obj",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/obj/Debug",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/Properties",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/wwwroot"
 	],
 	"file_history":
 	[
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/Controllers/HomeController.cs",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/TestNetCoreWebApp.csproj",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/IGreeter.cs",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/appsettings.json",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/appsettings.production.json",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/wwwroot/index.html",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/Properties/launchSettings.json",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/TestNetCoreWebApp.sublime-project",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/.gitignore",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/Program.cs",
+		"/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp/TestNetCoreWebApp.sln",
 		"/Users/alakratt/Library/Application Support/Sublime Text 3/Packages/OmniSharp/OmniSharpSublime.sublime-settings",
 		"/Users/alakratt/Documents/github/pluralsight_test1/src/routes/authorRoutes.js",
 		"/Users/alakratt/Documents/github/pluralsight_test1/gulpfile.js",
@@ -227,7 +314,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -236,15 +323,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1239,
+						"buffer_size": 2161,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1040,
-								1040
+								687,
+								687
 							]
 						],
 						"settings":
@@ -255,38 +342,15 @@
 							"SL.31.region_keys":
 							[
 							],
+							"SL.35.region_keys":
+							[
+							],
+							"oops":
+							{
+								"1956,1962": "There is no argument given that corresponds to the required formal parameter 'state' of 'string.Create<TState>(int, TState, SpanAction<char, TState>)'"
+							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "TestNetCoreWebApp.csproj",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 381,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -297,90 +361,688 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "TestNetCoreWebApp.sublime-project",
+					"buffer": 1,
+					"file": "Controllers/HomeController.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 118,
+						"buffer_size": 191,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								48,
-								48
+								191,
+								191
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (Sublime).sublime-syntax"
+							"oops":
+							{
+								"102,107": "Type 'HomeController' already defines a member called 'Index' with the same parameter types",
+								"59,73": "The namespace 'TestNetCoreWebApp.Controllers' already contains a definition for 'HomeController'"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9858,
+						"regions":
+						{
+							"10,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										1860,
+										1864
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"12,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										2232,
+										2236
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"14,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										2604,
+										2608
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"16,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										2976,
+										2980
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"18,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										3348,
+										3352
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"18,120":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"2,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										372,
+										376
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"20,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										3720,
+										3724
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"21,40":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"22,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										4092,
+										4096
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"22,15":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"23,50":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"24,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										4464,
+										4468
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"24,17":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"25,28":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"26,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										4836,
+										4840
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"28,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										5208,
+										5212
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"30,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										5580,
+										5584
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"30,40":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"31,18":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"32,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										5952,
+										5956
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"32,79":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"33,73":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"34,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										6324,
+										6328
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"34,22":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"35,63":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"36,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										6696,
+										6700
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"36,66":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"37,22":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"38,25":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.red_white"
+							},
+							"38,26":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"39,22":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"4,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										744,
+										748
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"40,45":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"41,67":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"42,22":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"43,19":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"44,20":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"45,54":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"46,14":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"47,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										8742,
+										8758
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"47,29":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"48,16":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"49,1":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							},
+							"54,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"56,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"58,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"6,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										1116,
+										1120
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"8,0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										1488,
+										1492
+									]
+								],
+								"scope": "terminalview.black_green"
+							},
+							"9,36":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										9858,
+										9858
+									]
+								],
+								"scope": "terminalview.white_red"
+							}
+						},
+						"selection":
+						[
+							[
+								9710,
+								9710
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"auto_complete_commit_on_tab": false,
+							"caret_style": "blink",
+							"color_scheme": "Packages/TerminalView/TerminalView.hidden-tmTheme",
+							"draw_centered": false,
+							"draw_indent_guides": false,
+							"draw_white_space": "none",
+							"gutter": false,
+							"highlight_line": false,
+							"scroll_past_end": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"terminal_view": true,
+							"terminal_view_activate_args":
+							{
+								"cmd": "/bin/bash -l",
+								"cwd": "/Users/alakratt/Documents/github/DotnetCoreFundamentals/TestNetCoreWebApp",
+								"keep_open": false,
+								"syntax": null,
+								"title": "Terminal (bash)"
+							},
+							"terminal_view_last_cursor_pos":
+							[
+								52,
+								38
+							],
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 346,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								346,
-								346
-							]
-						],
-						"settings":
-						{
-							"auto_indent": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_width": 2,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "appsettings.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 30,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								27,
-								27
-							]
-						],
-						"settings":
-						{
-							"auto_name": "{",
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -392,7 +1054,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 50.0
 	},
 	"layout":
 	{
@@ -431,7 +1093,7 @@
 	},
 	"output.variable_get":
 	{
-		"height": 0.0
+		"height": 125.0
 	},
 	"pinned_build_system": "",
 	"project": "TestNetCoreWebApp.sublime-project",
@@ -473,7 +1135,7 @@
 	},
 	"show_minimap": true,
 	"show_open_files": true,
-	"show_tabs": false,
+	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 208.0,
 	"status_bar_visible": true,
