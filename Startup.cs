@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace TestNetCoreWebApp
 {
@@ -15,13 +16,34 @@ namespace TestNetCoreWebApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IGreeter conf)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IGreeter conf, ILogger<Startup> logger)
         {
-            if (env.IsDevelopment())
+            /* if (env.IsDevelopment())
+             {
+                 app.UseDeveloperExceptionPage();
+             }*/
+            app.Use(next =>
             {
-                app.UseDeveloperExceptionPage();
-            }
-            
+                return async context =>
+                {
+                    logger.LogInformation("My own mothatfucking middleware!");
+                    if (context.Request.Path.StartsWithSegments("/mym"))
+                    {
+                        await context.Response.WriteAsync("");
+                        logger.LogInformation("request came in");
+                    }
+                    else 
+                    {
+                        await next(context);
+                        logger.LogInformation("request pased on");
+                    }
+                };
+                });
+            app.UseWelcomePage(new WelcomePageOptions
+            {
+                Path = "/wp"
+            });
+
 
             app.Run(async (context) =>
             {
