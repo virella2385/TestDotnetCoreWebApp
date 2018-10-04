@@ -1,4 +1,4 @@
-@model IEnumerable<TestNetCoreWebApp.Models.Restaurant>
+@model TestNetCoreWebApp.ViewModels.Home.HomeIndexViewModel
 
 <!DOCTYPE html>
 <html>
@@ -6,8 +6,13 @@
 	<title></title>
 </head>
 <body>
+	<div>
+		<h1>
+			@Model.currentMessage
+		</h1>
+	</div>
 	<table>
-		@foreach (var rest in Model)
+		@foreach (var rest in Model.restaurants)
 		{
 			<tr>
 				<td>
@@ -16,11 +21,13 @@
 				<td>
 					@rest.name
 				</td>
+				<td>
+					@Html.ActionLink("Details", "Details", new { id=rest.id })
+					&nbsp;
+					<a asp-action="Details" asp-route-id="@rest.id">More</a>
 			</tr>
 		}
 	</table>
-@* <h3>@Model.name</h3>
-<div>The name is @Model.id</div> *@
 
 </body>
 </html>

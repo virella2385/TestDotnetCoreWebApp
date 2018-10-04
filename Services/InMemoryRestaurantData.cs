@@ -23,5 +23,10 @@ namespace TestNetCoreWebApp.Services
             return _restaurants.OrderBy(r => r.id);
         }
 
+        public Restaurant Get(int id) 
+        {
+            return _restaurants.FirstOrDefault(r => r.id == id);
+        }
+
     }
 }
