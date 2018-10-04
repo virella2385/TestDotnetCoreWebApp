@@ -28,5 +28,13 @@ namespace TestNetCoreWebApp.Services
             return _restaurants.FirstOrDefault(r => r.id == id);
         }
 
+        public Restaurant Add(Restaurant restaurant) 
+        {
+            // Since it's in memory data, for the time being I'll generate the new id like so ...
+            restaurant.id = _restaurants.Max(r => r.id) + 1;
+            _restaurants.Add(restaurant);
+            return restaurant;
+        }
+
     }
 }

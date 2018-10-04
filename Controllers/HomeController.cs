@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using TestNetCoreWebApp.Models;
 using TestNetCoreWebApp.Services;
 using TestNetCoreWebApp.ViewModels.Home;
+using TestNetCoreWebApp.Views.Home;
 
 namespace TestNetCoreWebApp.Controllers
 {
@@ -21,20 +23,32 @@ namespace TestNetCoreWebApp.Controllers
             return View(result);
         }
 
-        public IActionResult Details(int id) 
+        public IActionResult Details(int id)
         {
-        	var result = _restaurantData.Get(id);
-        	if (result == null) 
-        	{
-        		return RedirectToAction(nameof(Index));
-        	}
+            var result = _restaurantData.Get(id);
+            if (result == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
 
-        	return View(result);
+            return View(result);
         }
 
-        public IActionResult Create() 
+        [HttpGet]
+        public IActionResult Create()
         {
-        	return View();
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(RestaurantEditModel restaurant)
+        {
+        	Restaurant newRestaurant = new Restaurant();
+        	newRestaurant.name = restaurant.name;
+        	newRestaurant.cuisine = restaurant.cuisine;
+
+        	newRestaurant = _restaurantData.Add(newRestaurant);
+            return View("Details", newRestaurant);
         }
     }
 }
