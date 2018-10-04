@@ -31,5 +31,10 @@ namespace TestNetCoreWebApp.Controllers
 
         	return View(result);
         }
+
+        public IActionResult Create() 
+        {
+        	return View();
+        }
     }
 }

@@ -4,5 +4,6 @@ namespace TestNetCoreWebApp.Models
     {
         public int id { get; set; }
         public string name { get; set; }
+        public CuisineType cuisine { get; set; }
     }
 }

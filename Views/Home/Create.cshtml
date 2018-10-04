@@ -1,0 +1,16 @@
+@using TestNetCoreWebApp.Models
+@model Restaurant
+
+<h1>
+	Create
+</h1>
+
+<form method="post">
+	<input asp-for="name" />
+
+	<select asp-for="cuisine" asp-items="@Html.GetEnumSelectList<CuisineType>()"></select>
+
+		<input type="submit" name="Save" value="Save" />
+	</form>
+
+
