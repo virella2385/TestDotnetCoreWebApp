@@ -41,14 +41,22 @@ namespace TestNetCoreWebApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryTokenAttribute]
         public IActionResult Create(RestaurantEditModel restaurant)
         {
-        	Restaurant newRestaurant = new Restaurant();
-        	newRestaurant.name = restaurant.name;
-        	newRestaurant.cuisine = restaurant.cuisine;
+            if (ModelState.IsValid)
+            {
+                Restaurant newRestaurant = new Restaurant();
+                newRestaurant.name = restaurant.name;
+                newRestaurant.cuisine = restaurant.cuisine;
 
-        	newRestaurant = _restaurantData.Add(newRestaurant);
-            return View("Details", newRestaurant);
+                newRestaurant = _restaurantData.Add(newRestaurant);
+                return RedirectToAction(nameof(Details), new { id = newRestaurant.id });
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

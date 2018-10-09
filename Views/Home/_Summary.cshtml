@@ -1,0 +1,11 @@
+@using TestNetCoreWebApp.Models
+@model Restaurant
+
+<section>
+	<h1>@Model.name</h1>
+	<div>Cuisine: @Model.cuisine</div>
+	<div>
+		<a asp-action="Details" asp-route-id="@Model.id">More</a>
+		<a asp-page="/Restaurants/Edit" asp-route-id="@Model.id">Edit</a>
+	</div>
+</section>

@@ -1,17 +1,19 @@
 @model TestNetCoreWebApp.ViewModels.Home.HomeIndexViewModel
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<div>
+@{
+	ViewBag.Title = "Home Page";
+}
+
 		<h1>
-			@Model.currentMessage
+			All Restaurants
 		</h1>
-	</div>
-	<table>
+
+		@foreach (var rest in Model.restaurants)
+		{
+			<partial name="_Summary.cshtml" for="@rest" />
+	}
+	
+	<!-- <table>
 		@foreach (var rest in Model.restaurants)
 		{
 			<tr>
@@ -22,13 +24,18 @@
 					@rest.name
 				</td>
 				<td>
-					@Html.ActionLink("Details", "Details", new { id=rest.id })
-					&nbsp;
+					@* @Html.ActionLink("Details", "Details", new { id=rest.id })
+					&nbsp; *@
 					<a asp-action="Details" asp-route-id="@rest.id">More</a>
+					<a asp-page="/Restaurants/Edit" asp-route-id="@rest.id">Edit</a>
 			</tr>
 		}
 
-	</table>
-<a asp-action="Create" asp-controller="Home">Add</a>
-</body>
-</html>
+	</table> -->
+	<div><a asp-action="Create" asp-controller="Home">Add Restaurant</a></div>
+
+<!-- <div>
+@section footer {
+	@Model.currentMessage
+}
+</div> -->

@@ -5,7 +5,7 @@ using TestNetCoreWebApp.Models;
 namespace TestNetCoreWebApp.Services
 {
 
-    public class InMemoryRestaurantData : IRestaurantData
+    /*public class InMemoryRestaurantData : IRestaurantData
     {
         List<Restaurant> _restaurants;
         public InMemoryRestaurantData()
@@ -36,5 +36,5 @@ namespace TestNetCoreWebApp.Services
             return restaurant;
         }
 
-    }
+    }*/
 }

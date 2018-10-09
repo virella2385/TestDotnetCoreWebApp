@@ -1,0 +1,26 @@
+﻿@page "{id}"
+@using TestNetCoreWebApp.Pages.Restaurants
+@model EditModel
+
+
+<h1>
+	Edit @Model.restaurant.name
+</h1>
+
+<form method="post">
+	<div>
+		<input asp-for="restaurant.id" type="hidden" />
+	<label asp-for="restaurant.name"></label>
+	<input asp-for="restaurant.name" />
+	<span asp-validation-for="restaurant.name"></span>
+</div>
+<br/>
+<div>
+	<label asp-for="restaurant.cuisine"></label>
+	<select asp-for="restaurant.cuisine" asp-items="@Html.GetEnumSelectList<CuisineType>()"></select>
+		<!-- <span asp-validation-for="restaurant.cuisine"></span> -->
+	</div>
+
+		<input type="submit" name="Save" value="Save" />
+		<button asp-action="Index" asp-controller="Home">Home</button>
+	</form>

@@ -6,11 +6,20 @@
 </h1>
 
 <form method="post">
+	<div>
+	<label asp-for="name"></label>
 	<input asp-for="name" />
-
+	<span asp-validation-for="name"></span>
+</div>
+<br/>
+<div>
+	<label asp-for="cuisine"></label>
 	<select asp-for="cuisine" asp-items="@Html.GetEnumSelectList<CuisineType>()"></select>
+		<!-- <span asp-validation-for="cuisine"></span> -->
+	</div>
 
 		<input type="submit" name="Save" value="Save" />
+		<button asp-action="Index">Home</button>
 	</form>
 
 

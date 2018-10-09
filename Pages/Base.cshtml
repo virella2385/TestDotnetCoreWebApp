@@ -1,0 +1,13 @@
+﻿@page
+@model BaseModel
+
+@{
+	ViewBag.Title = "List all";
+}
+
+<ul>
+	@foreach (var rest in Model.restaurants)
+	{
+	<li>@rest.name</li>
+}
+</ul>
